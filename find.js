@@ -13,6 +13,6 @@ mongo.connect(url, function(err, db) {
     }).toArray(function(err, documents) {
         if(err) throw err
         console.log(documents)
-        db.close
+        db.close();
     })
 });
