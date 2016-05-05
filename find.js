@@ -10,6 +10,10 @@ mongo.connect(url, function(err, db) {
         age: {
             $gt: +filterAge
         }
+    }, {
+        name: 1,
+        age: 1,
+        _id: 0
     }).toArray(function(err, documents) {
         if(err) throw err
         console.log(documents)
